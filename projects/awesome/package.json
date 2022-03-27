@@ -1,6 +1,7 @@
 {
-  "name": "awesome",
+  "name": "@chen_levin/awesome",
   "version": "0.0.1",
+  "repository": "chen_levin/awesome",
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0"
