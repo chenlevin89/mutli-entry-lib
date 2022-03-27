@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "awesome": {
+      "projectType": "library",
+      "root": "projects/awesome",
+      "sourceRoot": "projects/awesome/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/awesome/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/awesome/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/awesome/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/awesome/src/test.ts",
+            "tsConfig": "projects/awesome/tsconfig.spec.json",
+            "karmaConfig": "projects/awesome/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "awesome"
 }
