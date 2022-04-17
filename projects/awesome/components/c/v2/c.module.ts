@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AComponent } from '../a/a.component';
+import { CComponent } from './c.component';
 
 
 
 @NgModule({
   declarations: [
-    AComponent
+    CComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [AComponent]
+  exports: [CComponent]
 })
-export class AModule { }
+export class CModule { }

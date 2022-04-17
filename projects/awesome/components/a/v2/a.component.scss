@@ -1,0 +1,19 @@
+@import '../common/base/a.base.component.scss';
+
+.container{
+  border-radius: 4px;
+  border: 1px solid  rgba(244, 52, 52, 0.1);;
+}
+
+input[type="search"]{
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid  rgba(244, 52, 52, 0.1);
+  padding: 8px 5px;
+}
+
+
+p:hover{
+  background: rgba(244, 52, 52, 0.1);
+}

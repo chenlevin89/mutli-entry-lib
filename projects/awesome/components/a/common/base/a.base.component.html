@@ -1,0 +1,22 @@
+<div class="container">
+  <input type="search" placeholder="search..." [formControl]="searchControl" />
+
+  <div class="list-container">
+    <ng-container *ngIf="displayList$ | async as displayList">
+      <ng-container
+        [ngTemplateOutlet]="displayList?.length ? listItemRef : emptyRef"
+        [ngTemplateOutletContext]="{ list: displayList }"
+      >
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #emptyRef>
+  <p>NO RESULTS!</p>
+</ng-template>
+
+<ng-template #listItemRef let-list="list">
+  <lib-list-item  *ngFor="let item of list" [text]="item"></lib-list-item>
+</ng-template>
+

@@ -3,10 +3,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "awesome": [
-        "dist/awesome/awesome",
-        "dist/awesome"
-      ]
+      "@chen_levin/awesome/components": ["projects/awesome/components/index"],
+      "@chen_levin/awesome/components/*": ["projects/awesome/components/*"]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -27,7 +25,7 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
